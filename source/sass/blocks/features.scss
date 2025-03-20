@@ -1,0 +1,176 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $second-background;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.features__title {
+  @include smaller-title;
+
+  margin: 0 auto 40px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include middle-title;
+
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include bigger-title;
+  }
+}
+
+.features__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+  }
+}
+
+.features__item {
+  margin: 0 auto;
+}
+
+.features__item--content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 320px;
+  margin: 40px auto;
+  padding: 30px 75px 40px;
+  background-color: $dark-background;
+  color: $base-background;
+
+  @media (min-width: $tablet-width) {
+    padding: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    padding: 58px 28px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -48%);
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 0 0 20px;
+
+    @media (min-width: $tablet-width) {
+      gap: 25px;
+      margin: 0 0 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 10px;
+      margin: 0 0 30px;
+    }
+  }
+
+  dt {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 700;
+    padding: 0 10px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+
+  dd {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0 10px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  div {
+    padding: 0 5px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0 0 12px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    margin: 0 0 8px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0;
+    }
+  }
+}
+
+.features__item:first-child .content-features li {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding-bottom: 40px;
+  }
+}
+
+.features__item:last-child .content-features li {
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+  }
+}
+
+.features__item:first-child .content-features li::after {
+  @media (min-width: $desktop-width) {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Отступ вниз */
+    left: 0;
+    width: 100%; /* Полоска на всю ширину карточки */
+    height: 2px;
+    background-color: $current-color;
+    opacity: 0.2;
+  }
+}

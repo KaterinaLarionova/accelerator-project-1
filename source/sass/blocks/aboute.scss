@@ -1,0 +1,238 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $base-background;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1366px;
+    padding: 120px 103px 237px;
+  }
+}
+
+.about__holder {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 355px;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
+  }
+}
+
+.about__title {
+  @include smaller-title;
+
+  margin: 0 0 12px;
+  padding: 1px 0 0;
+
+  @media (min-width: $tablet-width) {
+    @include middle-title;
+
+    line-height: 43px;
+    text-align: center;
+    margin: 0 0 19px;
+    padding: 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include bigger-title;
+
+    text-align: left;
+    padding: 0 10px 0 0;
+    margin: 0 0 26px;
+  }
+}
+
+.about__lead {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 22px;
+    text-align: left;
+    padding: 0 10px 0 0;
+    margin-bottom: 94px;
+  }
+}
+
+.about__holder p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  margin: 0 0 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 502px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 355px;
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.about__holder p:nth-last-child(1) {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    width: 355px;
+    display: block;
+    padding: 0;
+  }
+}
+
+.about__image {
+  display: block;
+  margin: 0 auto 35px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.about__video-container {
+  display: block;
+  position: relative;
+  width: 320px;
+  height: 170px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 270px;
+    position: absolute;
+    margin: 0 auto;
+    transform: translate(-50%, -21%);
+    bottom: 0;
+    left: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    height: 230px;
+    transform: translate(-50%, -55%);
+  }
+}
+
+.about__poster {
+  display: block;
+  height: 171px;
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    height: 230px;
+  }
+}
+
+.about__iframe {
+  width: 320px;
+  height: 170px;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    width: 270px;
+    height: 170px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    height: 230px;
+  }
+}
+
+.about__button {
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  position: relative;
+  width: 72px;
+  height: 72px;
+  top: - 71%;
+  border: 2px solid rgba($double-background, 0.2);
+  border-radius: 50%;
+  outline-offset: 10px;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.about__button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  content: "";
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+
+  @media (min-width: $desktop-width) {
+    width: 72px;
+    height: 72px;
+    transform: translate(-50%, -53%);
+  }
+}
+
+.about__button::after {
+  content: "";
+  display: block;
+  border-top: 6px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid $base-background;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-31%, -60%);
+  width: 0;
+  height: 0;
+
+  @media (min-width: $desktop-width) {
+    border-top: 7px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 11px solid #ffffff;
+  }
+}
+

@@ -1,0 +1,34 @@
+.offers {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.offers__title {
+  @include smaller-title;
+
+  margin: 0 auto 40px;
+
+  @media (min-width: $tablet-width) {
+    @include middle-title;
+
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include bigger-title;
+
+    margin-bottom: 70px;
+  }
+}

@@ -1,0 +1,48 @@
+.filter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter__item {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.filter__button {
+  position: relative;
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 0 0 3px;
+  cursor: pointer;
+  color: $lite-text-color;
+
+  &--active {
+    position: relative;
+    color: $text-color;
+  }
+
+  &--active::after {
+    content: "";
+    position: relative;
+    display: block;
+    border-bottom: 2px solid $current-color;
+    bottom: -5px;
+  }
+}

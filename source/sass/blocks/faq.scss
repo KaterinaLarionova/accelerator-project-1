@@ -1,0 +1,277 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: $second-background;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.faq__title {
+  @include smaller-title;
+
+  text-align: center;
+  margin: 0 0 35px;
+
+  @media (min-width: $tablet-width) {
+    @include middle-title;
+
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include bigger-title;
+
+    text-align: left;
+    margin: 0 0 50px;
+  }
+}
+
+.faq__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media (min-width: $tablet-width) {
+    gap: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-flow: row wrap;
+    gap: 40px;
+  }
+}
+
+.faq__filter {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.faq__list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $divider-color;
+
+  @media (min-width: $desktop-width) {
+    width: 860px;
+  }
+}
+
+.faq__list.active {
+  display: block;
+}
+
+.faq__item {
+  border-bottom: 1px solid $divider-color;
+}
+
+.faq__item details {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 23px 0;
+  }
+}
+
+.faq__position br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.faq__item summary {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+    gap: 160px;
+  }
+}
+
+.faq__item b {
+  width: 231px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 22px;
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+    width: 660px;
+  }
+}
+
+.faq__item p {
+  display: flex;
+  flex-direction: column;
+  width: 243px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  margin: 20px 0 0;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    width: 560px;
+    margin: 10px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 24px;
+    width: 656px;
+    margin: 23px 0 0;
+  }
+}
+
+.faq__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.faq__button--close {
+  background-color: transparent;
+  border: solid 1px $dark-background;
+
+  &:hover {
+    border: solid 1px $dark-background;
+    background-color: $dark-background;
+
+    &::before {
+      background-color: $base-background;
+    }
+  }
+
+  &:focus-within {
+    outline: $dark-background solid 1px;
+    background-color: $divider-color;
+
+    &::before {
+      background-color: $base-background;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+    &::before {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+}
+
+.faq__button--close::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  mask-image: url("/__spritemap#sprite-plus-view");
+  background-color: $dark-background;
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.faq__button--open {
+  background-color: $dark-background;
+  border: none;
+}
+
+.faq__button--open::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 1px;
+  position: absolute;
+  mask-image: url("/__spritemap#sprite-minus-view");
+  background-color: $base-background;
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 1px;
+  }
+}
+
+.faq__details--open summary ~ * {
+  animation: slide-down 0.7s ease-in-out;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

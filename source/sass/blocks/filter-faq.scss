@@ -1,0 +1,63 @@
+.filter-faq {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.filter-faq__button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  width: 140px;
+  min-height: 46px;
+  padding: 10px;
+  color: $text-color;
+  border: 1px solid rgba($text-color, 0.2);
+  background-color: transparent;
+  text-transform: unset;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    min-height: 54px;
+    padding: 15px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 260px;
+    min-height: 54px;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.filter-faq__button:hover {
+  border: 1px solid $text-color;
+}
+
+.filter-faq__button--active {
+  color: $base-background;
+  background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
+  outline: none;
+}
+
+.filter-faq__button:focus {
+  outline: 1px solid $text-color;
+}
+
+.filter-faq__button:disabled {
+  border: 1px solid rgba($text-color, 0.2);
+  color: #c8c9cc;
+  pointer-events: none;
+}

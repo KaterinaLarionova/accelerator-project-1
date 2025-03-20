@@ -1,0 +1,119 @@
+.juri {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.juri__title {
+  @include smaller-title;
+
+  margin: 0 auto 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+.juri__swiper {
+  @media (min-width: $tablet-width) {
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+  }
+}
+
+.juri__list {
+  width: 260px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    margin: 0;
+  }
+}
+
+.Juri__expert {
+  flex-shrink: 0;
+  max-width: 260px;
+}
+
+.juri__button--prev,
+.juri__button--next {
+  position: absolute;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 32px;
+    top: 50%;
+    transform: translate(200%, -50%);
+    border: none;
+    background-color: transparent;
+    z-index: 10;
+  }
+}
+
+.juri__button--prev {
+  left: 0;
+  transform: translate(-30%, -50%);
+
+  @media (min-width: $desktop-width) {
+    transform: translate(-200%, -50%);
+  }
+}
+
+.juri__button--next {
+  right: 0;
+  transform: translate(30%, -50%);
+
+  @media (min-width: $desktop-width) {
+    transform: translate(200%, -50%);
+  }
+}
+
+.juri__button--prev::before {
+  display: block;
+  content: "";
+  mask-image: url("/__spritemap#sprite-slider-button-view");
+  width: 16px;
+  height: 32px;
+  background-color: $text-color;
+  transform: rotate(180deg);
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.juri__button--next::before {
+  display: block;
+  content: "";
+  mask-image: url("/__spritemap#sprite-slider-button-view");
+  width: 16px;
+  height: 32px;
+  background-color: $text-color;
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}

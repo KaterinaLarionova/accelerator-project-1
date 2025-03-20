@@ -1,0 +1,49 @@
+.overlay {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 260px;
+  height: 300px;
+  padding: 46px 40px 51px;
+  background: rgba(16, 38, 84, 0.89);
+  box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+  color: $base-background;
+  cursor: pointer;
+}
+
+.overlay__title {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.overlay__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style-type: disc;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+
+  li::marker {
+    color: $base-background;
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.overlay__item {
+  text-align: left;
+}
+
+.expert:hover .overlay,
+.expert:focus-within .overlay {
+  display: flex;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}

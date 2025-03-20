@@ -1,0 +1,9 @@
+.games {
+  display: flex;
+  flex-direction: column;
+  background-color: $base-background;
+}
+
+.games__image {
+  display: block;
+}

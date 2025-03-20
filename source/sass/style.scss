@@ -2,3 +2,37 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper.css";
+
+/* GLOBAL */
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/fonts";
+@import "./common/global";
+@import "./common/wrapper";
+
+/* BLOCKS */
+@import "blocks/visually-hidden";
+@import "blocks/button";
+@import "./blocks/page";
+@import "./blocks/main-header";
+@import "./blocks/navigation";
+@import "./blocks/logo";
+@import "./blocks/hero";
+@import "./blocks/aboute";
+@import "./blocks/price";
+@import "./blocks/filter";
+@import "./blocks/card";
+@import "./blocks/games";
+@import "./blocks/article";
+@import "./blocks/juri";
+@import "./blocks/expert";
+@import "./blocks/overlay";
+@import "./blocks/features";
+@import "./blocks/content-features";
+@import "./blocks/offers";
+@import "./blocks/promo";
+@import "./blocks/publicity";
+@import "./blocks/faq";
+@import "./blocks/filter-faq";
+
