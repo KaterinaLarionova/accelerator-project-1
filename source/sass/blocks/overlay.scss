@@ -11,6 +11,17 @@
   box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
   color: $base-background;
   cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  max-height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.overlay::-webkit-scrollbar {
+  display: none;
 }
 
 .overlay__title {
@@ -45,5 +56,5 @@
 .expert:hover .overlay,
 .expert:focus-within .overlay {
   display: flex;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
 }

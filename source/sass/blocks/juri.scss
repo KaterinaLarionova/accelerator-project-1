@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     padding-top: 30px;
@@ -23,6 +24,7 @@
   @media (min-width: $tablet-width) {
     font-size: 54px;
     line-height: 54px;
+    margin-bottom: 46px;
   }
 }
 
@@ -39,10 +41,10 @@
 .juri__list {
   width: 260px;
   position: relative;
-  margin: 0 auto;
   padding: 0;
   list-style: none;
   text-align: center;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     width: 560px;
@@ -50,9 +52,10 @@
   }
 }
 
-.Juri__expert {
+.juri__expert {
+  display: flex;
   flex-shrink: 0;
-  max-width: 260px;
+  width: 260px;
 }
 
 .juri__button--prev,
@@ -65,35 +68,45 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 30px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     top: 50%;
-    transform: translate(200%, -50%);
     border: none;
     background-color: transparent;
     z-index: 10;
+  }
+
+  &:hover {
+    border-radius: 50%;
+    border: 1px solid $text-color;
+  }
+
+  &:focus {
+    border-radius: 50%;
+    outline: 1px solid $text-color;
+    background-color: $light-background-color;
   }
 }
 
 .juri__button--prev {
   left: 0;
-  transform: translate(-30%, -50%);
+  transform: translate(-21%, 22%);
 
   @media (min-width: $desktop-width) {
-    transform: translate(-200%, -50%);
+    transform: translate(67%, 43%);
   }
 }
 
 .juri__button--next {
   right: 0;
-  transform: translate(30%, -50%);
+  transform: translate(21%, 22%);
 
   @media (min-width: $desktop-width) {
-    transform: translate(200%, -50%);
+    transform: translate(-65%, 43%);
   }
 }
 
-.juri__button--prev::before {
+.juri__button--prev::after {
   display: block;
   content: "";
   mask-image: url("/__spritemap#sprite-slider-button-view");
@@ -106,7 +119,7 @@
   mask-repeat: no-repeat;
 }
 
-.juri__button--next::before {
+.juri__button--next::after {
   display: block;
   content: "";
   mask-image: url("/__spritemap#sprite-slider-button-view");
@@ -116,4 +129,23 @@
   mask-size: cover;
   mask-position: center;
   mask-repeat: no-repeat;
+}
+
+.juri__button--prev:active,
+.juri__button--next:active {
+  background-color: $text-color;
+}
+
+.juri__button--prev:active::after,
+.juri__button--next:active::after {
+  background-color: $base-background;
+}
+
+.juri__button--prev:disabled,
+.juri__button--next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+  outline: none;
+  border: none;
 }

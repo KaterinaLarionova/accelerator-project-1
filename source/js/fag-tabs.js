@@ -6,11 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     tab.addEventListener('click', () => {
       const selectedCategory = tab.getAttribute('data-category');
 
-      // Убираем "active" у всех табов
       tabs.forEach((tubItem) => tubItem.classList.remove('filter-faq__button--active'));
       tab.classList.add('filter-faq__button--active');
-
-      // Показываем только нужную категорию
       faqLists.forEach((list) => {
         if (list.getAttribute('data-category') === selectedCategory) {
           list.style.display = 'block';

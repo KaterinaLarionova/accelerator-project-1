@@ -1,0 +1,15 @@
+.form {
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(90deg, $text-color 50%, $base-background 50%);
+    border-top: 1px solid $divider-color;
+  }
+}
+
+.form__inner {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1366px;
+    margin: 0 auto;
+  }
+}

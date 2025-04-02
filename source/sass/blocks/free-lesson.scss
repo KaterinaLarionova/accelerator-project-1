@@ -1,0 +1,161 @@
+.free-lesson {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 683px;
+    padding-top: 59px;
+  }
+}
+
+.free-lesson__inner {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  margin: 0 auto;
+  background-color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+  }
+}
+
+.free-lesson__title {
+  @include smaller-title;
+
+  margin: 0 0 36px;
+  color: $base-background;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    @include bigger-title;
+
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.free-lesson__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    gap: 30px;
+  }
+}
+
+.free-lesson__input {
+  display: flex;
+  flex-direction: column;
+  word-break: break-all;
+  width: 290px;
+  border: none;
+  border-bottom: 1px solid $divider-color;
+  background-color: inherit;
+  color: $base-background;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  padding: 2px 5px 2px 1px;
+
+  &:not(.free-lesson__input--error):hover {
+    border-bottom: 1px solid $base-background;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $base-background;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    border-bottom: 1px solid rgba($base-background, 0.3);
+  }
+
+  &:disabled::placeholder {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 205px;
+    padding: 1px 5px 2px 1px;
+    font-weight: 400;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 223px;
+  }
+}
+
+.free-lesson__input::placeholder {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  color: rgba($base-background, 0.4);
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+  }
+}
+
+.free-lesson__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 290px;
+  min-height: 60px;
+  padding: 15px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $base-background;
+  background-color: $text-color;
+  border: 2px solid $base-background;
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+    min-height: 66px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+  }
+}
+
+.free-lesson__input--error {
+  border-bottom: 1px solid $error-color;
+}
+
+.free-lesson__error {
+  color: $error-color;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  width: 205px;
+}

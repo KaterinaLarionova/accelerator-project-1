@@ -83,6 +83,10 @@
   @media (min-width: $tablet-width) {
     padding: 23px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 22px 0 23px;
+  }
 }
 
 .faq__position br {
@@ -242,7 +246,7 @@
   content: "";
   display: block;
   width: 14px;
-  height: 1px;
+  height: 2px;
   position: absolute;
   mask-image: url("/__spritemap#sprite-minus-view");
   background-color: $base-background;

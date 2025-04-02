@@ -1,8 +1,5 @@
-// Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
-@import "vendor/swiper.css";
+@import "vendor/swiper-bundle.css";
 
 /* GLOBAL */
 @import "./common/variables";
@@ -29,10 +26,15 @@
 @import "./blocks/expert";
 @import "./blocks/overlay";
 @import "./blocks/features";
-@import "./blocks/content-features";
 @import "./blocks/offers";
 @import "./blocks/promo";
 @import "./blocks/publicity";
 @import "./blocks/faq";
 @import "./blocks/filter-faq";
-
+@import "./blocks/review";
+@import "./blocks/free-lesson";
+@import "./blocks/contact";
+@import "./blocks/form";
+@import "./blocks/footer";
+@import "./blocks/main-navigation";
+@import "./blocks/social-list";

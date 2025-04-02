@@ -1,3 +1,33 @@
 .main-header {
-  @include liner-gradient;
+  background-color: #1c3477;
+  background-image: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 65.5%, #b4022a 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50vw;
+      height: 100%;
+      z-index: -1;
+    }
+
+    &::before {
+      left: 0;
+      background-color: #1c3477;
+    }
+
+    &::after {
+      right: 0;
+      background-color: #b4022a;
+    }
+  }
 }
+

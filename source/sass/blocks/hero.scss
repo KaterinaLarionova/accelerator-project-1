@@ -24,16 +24,13 @@
 .hero__inner {
   display: flex;
   flex-direction: column;
-  gap: 47px;
 
   @media (min-width: $tablet-width) {
     padding: 31px 0;
-    gap: 50px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 52px 0;
-    gap: 40px;
   }
 }
 
@@ -41,13 +38,16 @@
   display: flex;
   flex-flow: row wrap;
   gap: 21px;
+  margin-bottom: 48px;
 
   @media (min-width: $tablet-width) {
     gap: 26px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
     gap: 0;
+    margin-bottom: 39px;
   }
 }
 
@@ -142,7 +142,7 @@
   }
 }
 
-.hero__title--space {
+.hero__space {
   margin-right: -1px;
 
   @media (min-width: $tablet-width) {
@@ -159,17 +159,34 @@
   justify-content: center;
   align-items: center;
   width: 290px;
+  min-height: 60px;
   font-weight: 700;
   color: $base-background;
   background-color: transparent;
   border: solid 2px $base-background;
-  padding: 22px 10px;
+  padding: 10px;
   text-align: center;
+
+  &:hover {
+    background-color: $base-background;
+    color: $accent-color;
+  }
+
+  &:focus {
+    outline: 2px solid $dark-border;
+    background-color: rgba($base-background, 0.8);
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $text-color;
+    background-color: $base-background;
+  }
 
   @media (min-width: $tablet-width) {
     width: 185px;
-    max-height: 56px;
-    padding: 20px 10px;
+    min-height: 56px;
+    padding: 10px;
     align-self: flex-end;
   }
 
@@ -178,6 +195,11 @@
     min-height: 66px;
     padding: 25px 10px;
   }
+}
+
+.hero__button--disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .hero__image {

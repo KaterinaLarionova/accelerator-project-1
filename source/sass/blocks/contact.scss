@@ -1,0 +1,148 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  padding-top: 38px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 683px;
+    padding-top: 59px;
+  }
+}
+
+.contact__wrapper {
+  flex-direction: column;
+  width: 290px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 477px;
+  }
+}
+
+.contact__title {
+  @include smaller-title;
+
+  line-height: 30px;
+
+  margin: 0 auto 38px;
+
+  @media (min-width: $tablet-width) {
+    @include bigger-title;
+
+    margin: 0 auto 36px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 129px;
+  }
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    flex-direction: column;
+    width: 190px;
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    gap: 14px;
+  }
+}
+
+.contact__list:nth-child(2)::before {
+  @media (min-width: $tablet-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    width: 1px;
+    height: 117px;
+    border-left: 1px solid $divider-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: -60px;
+  }
+}
+
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    gap: 6px;
+  }
+}
+
+.contact__subtitle {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  font-family: $roboto;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.contact__info {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-style: normal;
+  color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

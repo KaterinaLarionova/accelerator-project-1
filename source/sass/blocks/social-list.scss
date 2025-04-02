@@ -1,0 +1,112 @@
+.social-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  width: 290px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 105px;
+    gap: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+}
+
+.social-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: $base-background;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    height: 26px;
+  }
+
+  &:hover {
+    background-color: $divider-color;
+
+    &::after {
+      background-color: $base-background;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $accent-color;
+
+    &::after {
+      background-color: $base-background;
+    }
+  }
+
+  &:active {
+    background-color: $text-color;
+
+    &::after {
+      background-color: $base-background;
+    }
+  }
+}
+
+.social-list__link--vk::after {
+  content: "";
+  width: 12px;
+  height: 7px;
+  background-color: $base-black;
+  mask-size: cover;
+  mask-position: center;
+  color: $base-black;
+  mask-image: url("/__spritemap#sprite-vk-view");
+  mask-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 13px;
+    height: 10px;
+  }
+}
+
+.social-list__link--ok::after {
+  content: "";
+  width: 9px;
+  height: 16px;
+  background-color: $base-black;
+  mask-size: cover;
+  mask-position: center;
+  color: $base-black;
+  mask-image: url("/__spritemap#sprite-ok-view");
+  mask-repeat: no-repeat;
+}
+
+.social-list__link--reddit::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: $base-black;
+  mask-size: cover;
+  mask-position: center;
+  color: $base-black;
+  mask-image: url("/__spritemap#sprite-reddit-view");
+  mask-repeat: no-repeat;
+}
+
+// модификатор для кнопки в состоянии disabled
+.social-list__link--disabled {
+  background-color: $base-background;
+  pointer-events: none;
+  opacity: 0.3;
+
+  &::after {
+    background-color: $base-black;
+  }
+}

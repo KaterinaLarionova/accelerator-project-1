@@ -24,7 +24,7 @@
 .about__holder {
   display: flex;
   flex-direction: column;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
@@ -43,7 +43,6 @@
   @include smaller-title;
 
   margin: 0 0 12px;
-  padding: 1px 0 0;
 
   @media (min-width: $tablet-width) {
     @include middle-title;
@@ -153,7 +152,7 @@
 
 .about__poster {
   display: block;
-  height: 171px;
+  height: 172px;
 
   @media (min-width: $desktop-width) {
     width: 360px;
@@ -189,6 +188,62 @@
   border-radius: 50%;
   outline-offset: 10px;
   cursor: pointer;
+
+  &:hover {
+    border: 2px solid rgba($text-color, 0.6);
+
+    &::before {
+      background-color: $base-background;
+      background-image: none;
+    }
+
+    &::after {
+      border-left: 8px solid rgba($text-color, 0.6);
+    }
+  }
+
+  &:focus {
+    border: 2px solid $text-color;
+    outline: none;
+
+    &::before {
+      background-color: #c8c9cc;
+      background-image: none;
+    }
+
+    &::after {
+      border-left: 8px solid $text-color;
+    }
+  }
+
+  &:active {
+    border: 2px solid $text-color;
+    outline: none;
+
+    &::before {
+      background-color: $base-background;
+      background-image: none;
+    }
+
+    &::after {
+      border-left: 8px solid $text-color;
+    }
+  }
+
+  &:disabled {
+    border: 2px solid rgba($text-color, 0.4);
+    pointer-events: none;
+    cursor: none;
+
+    &::before {
+      background-color: rgba($base-background, 0.4);
+      background-image: none;
+    }
+
+    &::after {
+      border-left: 8px solid rgba($text-color, 0.4);
+    }
+  }
 
   @media (min-width: $desktop-width) {
     width: 100px;

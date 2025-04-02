@@ -1,5 +1,6 @@
 .article {
   background-color: $base-background;
+  margin: 0 auto;
 }
 
 .article__holder {
@@ -44,7 +45,8 @@
 .article__wrapper {
   display: flex;
   flex-flow: row wrap;
-  gap: 37px;
+  justify-content: space-between;
+  background-color: $double-background;
 
   @media (min-width: $tablet-width) {
     gap: 20px;
@@ -74,6 +76,7 @@
   flex-direction: column;
   width: 56px;
   margin: 0;
+  gap: 5px;
 
   @media (min-width: $tablet-width) {
     width: 100px;
@@ -96,10 +99,12 @@
   line-height: 20px;
   font-weight: 300;
   border-bottom: 1px solid $base-background;
+  padding-bottom: 2px;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
+    padding-bottom: 1px;
   }
 }
 
@@ -110,8 +115,13 @@
 .article__datetime {
   display: flex;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 26px;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    align-items: center;
+  }
 
   @media (min-width: $desktop-width) {
     font-size: 40px;
@@ -124,11 +134,20 @@
   font-size: 12px;
   line-height: 100%;
   font-weight: 400;
-  margin-left: 3px;
+  margin-left: 4px;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 22px;
+    margin-left: 6px;
+  }
+}
+
+.article__brake {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
@@ -137,6 +156,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
+  background-color: $double-background;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
@@ -149,12 +169,30 @@
   justify-content: center;
   align-items: center;
   color: $base-background;
+  background-color: $double-background;
   width: 210px;
   min-height: 60px;
   padding: 14px 10px;
   border: 2px solid $base-background;
   text-decoration: none;
   font-weight: 700;
+
+  &:hover {
+    background-color: $base-background;
+    color: $accent-color;
+  }
+
+  &:focus {
+    outline: 2px solid $dark-border;
+    background-color: rgba($base-background, 0.8);
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $text-color;
+    background-color: $base-background;
+  }
+
 
   @media (min-width: $tablet-width) {
     width: 220px;

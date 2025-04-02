@@ -1,6 +1,8 @@
 .button {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  word-break: break-all;
   font-family: $roboto;
   font-size: 12px;
   line-height: 12px;

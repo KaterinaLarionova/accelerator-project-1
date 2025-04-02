@@ -20,11 +20,27 @@
 .navigation__contacts-phone {
   display: block;
   font-size: 22px;
-  line-height: 21px;
+  line-height: 19px;
   font-weight: 700;
   width: 149px;
   color: $base-background;
   text-decoration: none;
+
+  &:hover {
+    color: $dark-background;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+    color: $dark-background;
+  }
+
+  &:active {
+    color: $text-color;
+    border-bottom: 1px solid $text-color;
+  }
 
   @media (min-width: $tablet-width) {
     width: 162px;
@@ -37,4 +53,10 @@
     font-size: 26px;
     line-height: 30px;
   }
+}
+
+.navigation__contacts-phone--disabled {
+  color: $second-background;
+  opacity: 0.5;
+  pointer-events: none;
 }

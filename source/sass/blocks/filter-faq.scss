@@ -50,6 +50,11 @@
   color: $base-background;
   background: linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
   outline: none;
+  border: none;
+}
+
+.filter-faq__button--active:focus {
+  outline: none;
 }
 
 .filter-faq__button:focus {

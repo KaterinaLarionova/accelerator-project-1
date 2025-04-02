@@ -29,9 +29,21 @@
   display: block;
   border: none;
   background-color: transparent;
-  padding: 0 0 3px;
+  padding: 0 0 4px;
   cursor: pointer;
-  color: $lite-text-color;
+  color: rgba($text-color, 0.5);
+  outline: none;
+
+  &:hover {
+    color: rgba($text-color, 0.7);
+    border-bottom: 2px solid rgba($decorative-color, 0.7);
+  }
+
+  &:focus {
+    outline: none;
+    color: $text-color;
+    border-bottom: 2px solid $text-color;
+  }
 
   &--active {
     position: relative;
@@ -43,6 +55,11 @@
     position: relative;
     display: block;
     border-bottom: 2px solid $current-color;
-    bottom: -5px;
+    bottom: -6px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
   }
 }

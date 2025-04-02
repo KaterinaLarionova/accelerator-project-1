@@ -1,0 +1,258 @@
+.reviews {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.reviews__title {
+  @include smaller-title;
+
+  margin: 0 0 40px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include bigger-title;
+
+    margin: 0 0 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 75px;
+  }
+}
+
+.reviews__swiper {
+  width: 240px;
+  box-shadow: 0 0 40px rgba($dark-background, 0.2);
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+}
+
+.reviews__list {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 240px;
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+}
+
+.reviews__item {
+  color: $base-background;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  background-color: $dark-background;
+  padding: 30px 25px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+    padding: 40px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+    padding: 60px;
+    pointer-events: none;
+  }
+}
+
+.reviews__item blockquote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+  }
+}
+
+.reviews__item img {
+  display: block;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    max-width: none;
+    position: relative;
+    top: -41px;
+  }
+}
+
+.reviews__item div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: $dark-background;
+
+  @media (min-width: $tablet-width) {
+    width: 320px;
+    gap: 20px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 330px;
+  }
+}
+
+.reviews__item cite {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.reviews__item p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
+.reviews__button--prev,
+.reviews__button--next {
+  position: absolute;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    border: none;
+    background-color: transparent;
+    z-index: 10;
+  }
+
+  &:hover {
+    border-radius: 50%;
+    border: 1px solid $text-color;
+  }
+
+  &:focus {
+    border-radius: 50%;
+    outline: 1px solid $text-color;
+    background-color: $light-background-color;
+  }
+}
+
+.reviews__button--prev {
+  left: 0;
+  transform: translate(60%, 39%);
+
+  @media (min-width: $desktop-width) {
+    transform: translate(-200%, -50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateY(76%);
+    left: 283px;
+  }
+}
+
+.reviews__button--next {
+  right: 0;
+  transform: translate(-53%, 39%);
+
+  @media (min-width: $desktop-width) {
+    transform: translate(-54%, 40%);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateY(76%);
+    right: 283px;
+  }
+}
+
+.reviews__button--prev::after {
+  display: block;
+  content: "";
+  mask-image: url("/__spritemap#sprite-slider-button-view");
+  width: 16px;
+  height: 32px;
+  background-color: $text-color;
+  transform: rotate(180deg);
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.reviews__button--next::after {
+  display: block;
+  content: "";
+  mask-image: url("/__spritemap#sprite-slider-button-view");
+  width: 16px;
+  height: 32px;
+  background-color: $text-color;
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.reviews__button--prev:active,
+.reviews__button--next:active {
+  background-color: $text-color;
+}
+
+.reviews__button--prev:active::after,
+.reviews__button--next:active::after {
+  background-color: $base-background;
+}
+
+.reviews__button--prev:disabled,
+.reviews__button--next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+  outline: none;
+  border: none;
+}

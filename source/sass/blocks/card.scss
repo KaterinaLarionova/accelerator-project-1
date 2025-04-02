@@ -4,12 +4,20 @@
   flex-direction: column;
   text-align: center;
   gap: 18px;
-  padding: 50px 42px;
+  padding: 43px 35px;
   background-color: $base-background;
+  border: 7px solid transparent;
+
+  &:hover,
+  &:focus-within {
+    border-image-source: linear-gradient(126.05deg, #ed0233 10%, #003eb7 88.31%);
+    border-image-slice: 1;
+    cursor: pointer;
+  }
 
   @media (min-width: $tablet-width) {
     width: 380px;
-    padding: 65px;
+    padding: 58px;
     gap: 22px;
   }
 
@@ -44,15 +52,15 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-content: end;
+  align-content: flex-end;
   gap: 10px;
   padding: 0 10px;
   min-height: 119px;
   position: relative;
   z-index: 5;
   font-weight: 700;
-  font-size: 49px;
-  line-height: 150%;
+  font-size: 48px;
+  line-height: 149%;
   text-align: center;
   vertical-align: middle;
   color: $accent-color;
@@ -91,14 +99,13 @@
   }
 }
 
-
 .card__price::before {
   content: attr(data-price);
   position: absolute;
   z-index: -1;
   font-weight: 700;
   font-size: 80px;
-  line-height: 152%;
+  line-height: 147%;
   text-align: center;
   vertical-align: middle;
   color: $light-background-color;
@@ -117,6 +124,21 @@
   border: 2px solid $text-color;
   align-items: center;
 
+  &:hover {
+    @include button-active;
+  }
+
+  &:focus {
+    @include button-active;
+
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    @include button-active;
+  }
+
   @media (min-width: $tablet-width) {
     width: 250px;
     padding: 15px 10px;
@@ -126,3 +148,8 @@
     width: 230px;
   }
 }
+
+.card__button--disabled {
+  opacity: 0.3;
+}
+

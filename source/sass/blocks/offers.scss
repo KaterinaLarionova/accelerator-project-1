@@ -18,7 +18,8 @@
 .offers__title {
   @include smaller-title;
 
-  margin: 0 auto 40px;
+  line-height: 33px;
+  margin: 0 auto 39px;
 
   @media (min-width: $tablet-width) {
     @include middle-title;

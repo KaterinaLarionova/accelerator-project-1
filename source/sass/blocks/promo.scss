@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 678px;
     gap: 35px;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -17,13 +17,14 @@
 }
 
 .promo__wrapper {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-
   @media (min-width: $tablet-width) {
     flex-flow: row wrap;
+    display: flex;
   }
+}
+
+.promo__background {
+  background-color: $double-background;
 }
 
 .promo__container {
@@ -34,6 +35,7 @@
   background-color: $double-background;
   color: $base-background;
   align-items: center;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 278px;
@@ -48,7 +50,7 @@
   }
 }
 
-.promo__info {
+.promo__container dl {
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -62,7 +64,7 @@
   }
 }
 
-.promo__time {
+.promo__container dt {
   font-size: 22px;
   line-height: 22px;
   font-weight: 700;
@@ -78,7 +80,7 @@
   }
 }
 
-.promo__price {
+.promo__container dd {
   font-size: 64px;
   line-height: 64px;
   font-weight: 700;
@@ -90,7 +92,7 @@
   }
 }
 
-.promo__description {
+.promo__container p {
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
@@ -110,6 +112,7 @@
 }
 
 .promo__button {
+  position: relative;
   width: 73px;
   padding-bottom: 5px;
   font-size: 14px;
@@ -118,8 +121,44 @@
   text-transform: uppercase;
   color: $base-background;
   border-bottom: 1px solid $base-background;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: 2px;
+      border: 1px solid $base-background;
+      pointer-events: none;
+    }
+  }
+
+  &:active {
+    border-bottom: 1px solid $base-background;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.promo__button--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  border-bottom: 1px solid rgba($base-background, 0.3);
 }
 
 .promo__image {
   display: block;
+  margin: 0 auto;
 }
+
