@@ -2,7 +2,6 @@
   "name": "accelerator-first-project",
   "private": true,
   "version": "0.0.1",
-  "homepage": "https://github.com/KaterinaLarionova/accelerator-1.git",
   "type": "module",
   "scripts": {
     "dev": "vite --host --open",
@@ -32,7 +31,6 @@
     "cli-progress": "3.12.0",
     "eslint": "8.57.0",
     "eslint-config-htmlacademy": "10.0.1",
-    "gh-pages": "^6.3.0",
     "glob": "10.3.10",
     "gulp-html-bemlinter": "3.0.1",
     "html-validate": "8.11.1",

@@ -40,6 +40,7 @@
   &:hover {
     border-bottom: 1px solid $base-background;
     cursor: pointer;
+    transition: transform .3s ease-in-out;
   }
 
   &:focus {

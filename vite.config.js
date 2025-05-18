@@ -1,6 +1,10 @@
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
-// import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /** @type {import('vite').UserConfig} */
 export default {
@@ -65,8 +69,13 @@ export default {
   build: {
     outDir: '../dist',
   },
-  base: '/accelerator-1',
+  base: '/accelerator-project-1/',
   server: {
     port: 3000,
-  }
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'source'),
+    },
+  },
 };
