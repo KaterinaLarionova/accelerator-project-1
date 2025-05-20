@@ -34,12 +34,27 @@
   color: rgba($text-color, 0.5);
   outline: none;
 
-  &:hover {
-    color: rgba($text-color, 0.7);
-    border-bottom: 2px solid rgba($decorative-color, 0.7);
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 0;
+    bottom: -2px;
+    background-color: rgba($decorative-color, 0.7);
+    -webkit-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
   }
 
-  &:focus {
+  &:hover {
+    color: $text-color;
+  }
+
+  &:hover:not(.filter__button--active)::after {
+    width: 100%;
+  }
+
+  &:focus::after {
     outline: none;
     color: $text-color;
     border-bottom: 2px solid $text-color;
@@ -48,14 +63,9 @@
   &--active {
     position: relative;
     color: $text-color;
-  }
-
-  &--active::after {
-    content: "";
-    position: relative;
     display: block;
     border-bottom: 2px solid $current-color;
-    bottom: -6px;
+    bottom: -1px;
   }
 
   &:disabled {

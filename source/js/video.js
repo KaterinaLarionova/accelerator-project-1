@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded',() => {
   function loadVideo() {
     const iframe = document.createElement('iframe');
     iframe.classList.add('about__iframe');
-    iframe.src = 'https://www.youtube.com/embed/9TZXsZItgdw?si=FJOxqHGUDEom9jij&autoplay=1'; // Замени VIDEO_ID на реальный ID видео
+    iframe.src = 'https://www.youtube.com/embed/9TZXsZItgdw?si=FJOxqHGUDEom9jij&autoplay=1';
     iframe.loading = 'lazy';
     iframe.allow = 'autoplay; encrypted-media';
     iframe.allowFullscreen = true;
 
-    videoWrapper.innerHTML = ''; // Очищаем div, убирая картинку и кнопку
-    videoWrapper.appendChild(iframe); // Вставляем iframe
+    videoWrapper.innerHTML = '';
+    videoWrapper.appendChild(iframe);
   }
   playButton.addEventListener('click', loadVideo);
 });

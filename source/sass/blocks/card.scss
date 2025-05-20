@@ -123,9 +123,29 @@
   font-weight: 700;
   border: 2px solid $text-color;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  color: $text-color;
+
+  &::after {
+    content: "";
+    width: 0;
+    min-height: 64px;
+    @include button-active;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
   &:hover {
-    @include button-active;
+    color: $base-background;
+    border: none;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 
   &:focus {

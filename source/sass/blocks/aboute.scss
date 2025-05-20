@@ -195,6 +195,7 @@
     &::before {
       background-color: $base-background;
       background-image: none;
+      transition: all 1s ease-in-out;
     }
 
     &::after {

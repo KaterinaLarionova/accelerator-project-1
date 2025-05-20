@@ -28,6 +28,7 @@ form.addEventListener('submit', (evt) => {
     nameInput.classList.add('free-lesson__error');
     nameInput.classList.add('free-lesson__input--error');
     nameError.classList.remove('visually-hidden');
+    nameError.classList.add('free-lesson__input--error');
     nameError.textContent = 'Введите буквы и пробелы';
     isValid = false;
   } else if (name.length < MIN_LENGTH || name.length > MAX_LENGTH) {
@@ -35,6 +36,7 @@ form.addEventListener('submit', (evt) => {
     nameInput.classList.add('free-lesson__input--error');
     nameError.textContent = `Имя должно быть от ${MIN_LENGTH} до ${MAX_LENGTH} символов`;
     nameError.classList.remove('visually-hidden');
+    nameError.classList.add('free-lesson__input--error');
     isValid = false;
   }
 
@@ -43,11 +45,13 @@ form.addEventListener('submit', (evt) => {
     phoneInput.classList.add('free-lesson__input--error');
     phoneError.textContent = 'Введите цифры';
     phoneError.classList.remove('visually-hidden');
+    phoneError.classList.add('free-lesson__input--error');
     isValid = false;
   }
 
   if (isValid) {
     form.submit();
+    form.reset();
   }
 });
 

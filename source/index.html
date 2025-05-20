@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="page" lang="ru" data-validate="html" xmlns="http://www.w3.org/1999/xhtml">
+<html class="page" lang="ru" data-validate="html" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.w3.org/1999/html">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +10,6 @@
   <link rel="icon" href="favicon_ico.ico" sizes="32x32">
   <link rel="icon" href="favicons/favicon_svg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-icon.png">
-  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/alumni-sans/AlumniSans-ExtraBold.woff" type="font/woff" as="font"
         crossorigin="anonymous">
   <link rel="preload" href="fonts/alumni-sans/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font"
@@ -729,19 +729,19 @@
           <h2 class="free-lesson__title">Бесплатное занятие</h2>
           <form class="free-lesson__form" action="https://echo.htmlacademy.ru/courses" method="post">
             <div class="free-lesson__wrapper">
-              <label class="free-lesson__holder">
-                <span class="visually-hidden">Введите ваше имя</span>
+              <div class="free-lesson__holder">
+                <label class="visually-hidden" for="input-name">Введите ваше имя></label>
                 <input class="free-lesson__input" type="text" name="input-name" id="input-name" placeholder="Имя"
                        required maxlength="30">
-                <span class="visually-hidden" id="name-error">'Имя может содержать только буквы и пробелы'</span>
-              </label>
-              <label class="free-lesson__holder">
-                <span class="visually-hidden">Введите ваш телефон</span>
+                <span class="visually-hidden" id="name-error">'Введите буквы'</span>
+              </div>
+              <div class="free-lesson__holder">
+                <label class="visually-hidden" for="input-phone">Введите телефон></label>
                 <input class="free-lesson__input free-lesson__input--phone" type="tel" name="input-phone"
                        id="input-phone" placeholder="Телефон"
                        required>
-                <span class="visually-hidden" id="phone-error">'Введите цифры'</span>
-              </label>
+                <span class="visually-hidden" id="phone-error">'Введите цифры</span>
+              </div>
             </div>
             <button class="button free-lesson__button" type="submit">Отправить</button>
           </form>
